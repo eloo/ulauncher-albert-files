@@ -19,6 +19,7 @@ elif Launcher.get() == Launcher.ULAUNCHER:
                 return icon.get_filename()
             return None
     except ImportError: pass
+    except AttributeError: pass
 
 class IconRegistry(metaclass=Singleton):
     ICON_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
