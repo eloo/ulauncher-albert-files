@@ -9,6 +9,7 @@ if Launcher.get() == Launcher.ALBERT:
     except ImportError: pass
 elif Launcher.get() == Launcher.ULAUNCHER:
     try:
+        gi.require_version('Gtk', '4.0')
         from gi.repository import Gtk
         icon_theme = Gtk.IconTheme.get_default()
         def iconLookup(icon_name):
